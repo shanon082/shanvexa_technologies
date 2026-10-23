@@ -62,7 +62,7 @@ export function EnquiryForm() {
             required
             pattern=".*\S.*"
             title="Please enter your name, rather than spaces."
-            placeholder="Jane Apio"
+            placeholder="shanvexa"
             maxLength={100}
           />
         </label>
@@ -73,7 +73,7 @@ export function EnquiryForm() {
             type="email"
             autoComplete="email"
             required
-            placeholder="jane@company.com"
+            placeholder="shanvexa@gmail.com"
             maxLength={254}
           />
         </label>
