@@ -121,6 +121,23 @@ The Academic Timetable Platform, Avenora Foundation website demo, and energy-sha
 - TypeScript strict checks passed.
 - The Next.js production build passed and prerendered the homepage.
 - Generated production HTML contains all three project showcases, unique IDs, valid section links and React script bundles.
-- Browser visual and interaction QA remains unverified because preview access was unavailable. Review navigation, dialogs and contact flow on your laptop before public launch.
+- The current review adds Chromium browser coverage and responsive screenshots; see `SHANVEXA_WEBSITE_REVIEW.md` for the latest results and remaining limits.
 
 Official Next.js setup documentation: https://nextjs.org/docs/app/getting-started/installation
+
+## Website review and repeatable checks
+
+See [SHANVEXA_WEBSITE_REVIEW.md](SHANVEXA_WEBSITE_REVIEW.md) for the current implementation review, verification results, limitations, and founder input needed before deployment.
+
+```bash
+npm ci
+npm run lint
+npm run typecheck
+npm run build
+npx playwright install chromium
+npm test
+```
+
+Browser tests start the local production server on port 3100. They cover six viewport widths, service selection, contact validation/draft copying, dialogs, FAQ, section links, and metadata routes. They do not send email or WhatsApp messages. Screenshots are written to ignored `test-results/` output. No existing automated tests were present before this review.
+
+`src/lib/site.ts` contains the canonical production URL. Update it if the business adopts a custom domain. The sharing card is generated locally by `src/app/opengraph-image.tsx`; sitemap and robots routes follow the same URL. Do not put private assets, credentials, or real customer records in `public/`.

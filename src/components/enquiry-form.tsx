@@ -6,6 +6,7 @@ import { useEnquiry } from "./enquiry-context";
 
 export function EnquiryForm() {
   const { service, setService } = useEnquiry();
+  const [error, setError] = useState("");
   const [brief, setBrief] = useState("");
   const [copied, setCopied] = useState(false);
   const [showFallback, setShowFallback] = useState(false);
@@ -17,7 +18,17 @@ export function EnquiryForm() {
     const name = String(data.get("name") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
-    const text = `Hello ${site.name},\n\nI'd like to discuss a project.\n\nName: ${name}\nEmail: ${email}\nService: ${service}\n\nProject details:\n${message}\n\nThank you.`;
+    if (!name || message.length < 20) {
+      setError(!name
+        ? "Please enter your name."
+        : "Please describe your project in at least 20 characters so we can understand what you need.");
+      const field = event.currentTarget.elements.namedItem(!name ? "name" : "message");
+      if (field instanceof HTMLElement) field.focus();
+      return;
+    }
+    setError("");
+    const timeline = String(data.get("timeline") ?? "").trim();
+    const text = `Hello ${site.name},\n\nI'd like to discuss a project.\n\nName: ${name}\nEmail: ${email}\nService: ${service}\nTimeline: ${timeline || "To be discussed"}\n\nProject details:\n${message}\n\nThank you.`;
     setBrief(text);
     setCopied(false);
     setShowFallback(false);
@@ -35,7 +46,12 @@ export function EnquiryForm() {
   }
 
   return (
-    <form id="enquiry-form" className="enquiry-form" onSubmit={prepareEnquiry}>
+    <form
+      id="enquiry-form"
+      className="enquiry-form"
+      onSubmit={prepareEnquiry}
+      onChange={() => { setBrief(""); setError(""); }}
+    >
       <h3>A good project starts with a conversation.</h3>
       <div className="form-row">
         <label>
@@ -45,6 +61,7 @@ export function EnquiryForm() {
             autoComplete="name"
             required
             pattern=".*\S.*"
+            title="Please enter your name, rather than spaces."
             placeholder="Jane Apio"
             maxLength={100}
           />
@@ -79,15 +96,23 @@ export function EnquiryForm() {
         </select>
       </label>
       <label>
-        A little about your project
+        Tell us about your project
         <textarea
           name="message"
           required
           rows={4}
-          placeholder="What would you like to build or improve?"
+          minLength={20}
+          aria-describedby="project-help form-error"
+          placeholder="What needs to improve, who will use it, and what should the software help them do?"
           maxLength={4000}
         />
       </label>
+      <p id="project-help" className="form-note">At least 20 characters. A short outline is enough to start.</p>
+      <label>
+        Preferred timeline (optional)
+        <input name="timeline" maxLength={120} placeholder="For example, next term or flexible" />
+      </label>
+      <p id="form-error" role="alert" className="form-error">{error}</p>
       <button className="button button-dark" type="submit">
         Prepare my enquiry <span>↗</span>
       </button>

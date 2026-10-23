@@ -24,8 +24,8 @@ export function SelectedWork() {
           <div className="work-copy">
             <span className="tag">EDUCATION TECHNOLOGY · FOUNDER’S WORK</span>
             <h3>
-              A better timetable.
-              <br />A smoother semester.
+              Automated Timetable
+              <br />Generator.
             </h3>
             <p>
               Give academic administrators a clearer way to plan classes, manage
@@ -38,7 +38,7 @@ export function SelectedWork() {
             </ul>
             <ProductDetails />
             <span className="work-caption">
-              Academic Timetable Platform · Available for demos
+              Laravel · React · Scheduling optimisation · Demo by arrangement
               <br />
               By Shanon Simon Lubega · Full-stack development
             </span>
@@ -93,7 +93,7 @@ export function SelectedWork() {
               </div>
             </div>
             <span className="art-caption">
-              A simplified view of the scheduling workflow
+              Illustration of the scheduling workflow · Not a screenshot
             </span>
           </div>
         </div>
@@ -127,8 +127,9 @@ export function SelectedWork() {
               </div>
               <h3 id="avenora-title">Avenora Foundation</h3>
               <p>
-                A website showcase exploring how a foundation can introduce its
-                work through a clear, professional online presence.
+                A fictional foundation website exploring clear storytelling and
+                an approachable online presence. A presentation concept, not a
+                paid client engagement.
               </p>
               <div className="project-credit">
                 <span>BUILT BY</span>
@@ -140,8 +141,9 @@ export function SelectedWork() {
               <div className="project-tech">
                 <span>Next.js</span>
                 <span>React</span>
-                <span>Web design</span>
+                <span>TypeScript</span>
               </div>
+              <a className="text-link project-demo" href="https://avenora-foundation.vercel.app/" target="_blank" rel="noopener noreferrer">View public demo <span aria-hidden="true">↗</span><span className="sr-only"> (opens in a new tab)</span></a>
               <details className="project-details">
                 <summary>
                   Explore this project <span>+</span>
@@ -155,13 +157,12 @@ export function SelectedWork() {
                     </dd>
                     <dt>My contribution</dt>
                     <dd>
-                      Website design and implementation, with the Next.js
-                      project set up and running locally.
+                      Website design and implementation using Next.js and TypeScript.
                     </dd>
                     <dt>Current stage</dt>
                     <dd>
-                      A working website demo running locally, presented as a
-                      showcase ahead of public launch.
+                      Public fictional website demonstration. It does not represent
+                      an operating foundation or a completed client engagement.
                     </dd>
                   </dl>
                   <ServiceLink
@@ -226,7 +227,8 @@ export function SelectedWork() {
               <h3 id="energy-title">Energy-sharing platform</h3>
               <p>
                 A connected web and Android prototype bringing account, meter,
-                and loan information into a shared digital experience.
+                and simulated energy information into a shared digital experience.
+                Financial and hardware features are not live production services.
               </p>
               <div className="project-credit">
                 <span>BUILT BY</span>

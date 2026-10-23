@@ -23,7 +23,8 @@ export function Approach() {
           <h3>Understand</h3>
           <p>
             We listen to the problem, the people involved, and what a successful
-            outcome looks like.
+            outcome looks like. You share how you work today and what
+            you need to improve.
           </p>
           <small>A shared project brief</small>
         </article>
@@ -34,7 +35,8 @@ export function Approach() {
           <h3>Shape</h3>
           <p>
             We agree on priorities, design the experience, and define the scope
-            before development begins.
+            before development begins. You review the proposed features,
+            costs, and delivery plan before agreeing to proceed.
           </p>
           <small>A clear scope &amp; direction</small>
         </article>
@@ -45,7 +47,8 @@ export function Approach() {
           <h3>Build</h3>
           <p>
             We develop in focused stages, share progress, and use your feedback
-            to refine the details.
+            to refine the details. You try the work as it develops and
+            confirm that it fits your day-to-day tasks.
           </p>
           <small>Visible progress &amp; reviews</small>
         </article>
@@ -56,7 +59,8 @@ export function Approach() {
           <h3>Launch &amp; support</h3>
           <p>
             We test, prepare for launch, and walk you through your software,
-            with support agreed to your needs.
+            with maintenance responsibilities and support terms agreed
+            to your needs.
           </p>
           <small>A confident handover</small>
         </article>

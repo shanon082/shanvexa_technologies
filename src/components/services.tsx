@@ -31,13 +31,15 @@ export function Services() {
           </div>
           <h3>Websites &amp; web apps</h3>
           <p>
-            A professional home for your business, or a tailored application
-            that makes your services easier to use.
+            Help people find your organisation and use your services online.
+            Company websites, school portals, and dashboards give visitors
+            clear information and a practical way to take action.
           </p>
           <div className="service-bottom">
             <span>Company websites · Portals · Dashboards</span>
-            <b>↗</b>
+            <b aria-hidden="true">↗</b>
           </div>
+          <span className="service-action">Discuss this service ↗</span>
         </ServiceLink>
         <ServiceLink service="Custom business system" className="service-card">
           <div className="service-top">
@@ -52,12 +54,14 @@ export function Services() {
           <h3>Business systems</h3>
           <p>
             Bring scattered records and repetitive processes into one clear,
-            practical workspace for your organisation.
+            practical workspace for your organisation. Manage records,
+            approvals, and reports without repeatedly copying information.
           </p>
           <div className="service-bottom">
             <span>Operations · Reporting · Administration</span>
-            <b>↗</b>
+            <b aria-hidden="true">↗</b>
           </div>
+          <span className="service-action">Discuss this service ↗</span>
         </ServiceLink>
         <ServiceLink service="Mobile application" className="service-card">
           <div className="service-top">
@@ -70,12 +74,14 @@ export function Services() {
           <h3>Mobile applications</h3>
           <p>
             Put the tools your customers and teams need in their hands, with
-            focused, easy-to-navigate mobile experiences.
+            focused, easy-to-navigate mobile experiences. From field data
+            collection to customer self-service, keep tasks accessible on the go.
           </p>
           <div className="service-bottom">
             <span>Android · Flutter · Connected experiences</span>
-            <b>↗</b>
+            <b aria-hidden="true">↗</b>
           </div>
+          <span className="service-action">Discuss this service ↗</span>
         </ServiceLink>
         <ServiceLink
           service="Integration, automation or support"
@@ -90,12 +96,14 @@ export function Services() {
           <h3>Integration &amp; support</h3>
           <p>
             Connect your tools, simplify repetitive tasks, and give existing
-            software the attention it needs to move forward.
+            software the attention it needs to move forward. API connections,
+            automated updates, and bug fixes help reduce manual work.
           </p>
           <div className="service-bottom">
             <span>APIs · Automation · Maintenance</span>
-            <b>↗</b>
+            <b aria-hidden="true">↗</b>
           </div>
+          <span className="service-action">Discuss this service ↗</span>
         </ServiceLink>
       </div>
     </section>

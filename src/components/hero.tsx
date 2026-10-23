@@ -13,16 +13,16 @@ export function Hero() {
           <span>Real impact.</span>
         </h1>
         <p>
-          We turn everyday business challenges into thoughtful digital
-          solutions. Built around your people, your processes, and what comes
-          next.
+          We build websites, custom business systems, mobile apps, and
+          integrations that reduce everyday admin. For businesses, schools,
+          NGOs, and organisations in Uganda and beyond.
         </p>
         <div className="hero-actions">
           <a className="button button-dark" href="#contact">
-            Let’s build something <span>↗</span>
+            Discuss your project <span>↗</span>
           </a>
           <a className="text-link" href="#work">
-            Explore our work <span>↓</span>
+            View our work <span>↓</span>
           </a>
         </div>
         <div className="hero-note">
@@ -54,7 +54,7 @@ export function Hero() {
             <div className="window-heading">
               <div>
                 <span className="micro">YOUR WEEK, IN FOCUS</span>
-                <h3>A better kind of timetable.</h3>
+                <p className="preview-heading">A better kind of timetable.</p>
               </div>
               <span className="window-pill">Weekly view</span>
             </div>

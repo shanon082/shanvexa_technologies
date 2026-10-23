@@ -1,4 +1,5 @@
 export const site = {
+  url: "https://shanvexa-technologies.vercel.app",
   name: "Shanvexa Technologies",
   tagline: "Engineering What’s Next.",
   description:
